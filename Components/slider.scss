@@ -49,8 +49,21 @@
                 width: 100%;
                 height: 100%;
                 background: rgba(0,0,0,.2);
-                z-index: 1;
+                z-index: 2;
             }
+        }
+    }
+    .hs-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
     .hs-container{
@@ -60,7 +73,7 @@
         @extend .uk-container;
         box-sizing: border-box;
         position: relative;
-        z-index: 2;
+        z-index: 3;
     }
     .hs-content{
         @extend .uk-width-5-6;

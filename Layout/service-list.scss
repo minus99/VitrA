@@ -170,14 +170,13 @@
             font-weight: 700;
             line-height: 19px;
         }
-        [class$="_Adres"]
-        [class$="_UlkeSehirSemt"]{
-            color: $cl3;
-            font-size: 14px;
-            line-height: 19px;
+        [class$="_WebAdresi"] {
+            font-size: 12px;
+            margin-top: 5px;
         }
-        [class$="_UlkeSehirSemt"]{
-            display: none;
+        [class$="_Adres"] {
+            color: $cl3;
+            margin-top: 5px;
         }
         [class$="_Telefon"]{
             margin-top: 10px;
@@ -208,9 +207,9 @@
             }
 
         }
+        [class$="_UlkeSehirSemt"],
         [class$="_DepoSec"],
         [class$="_Yetkili"],
-        [class$="_WebAdresi"],
         [class$="_Email"],
         [class$="_Fax"],
         [class$="_tdResim"]{
