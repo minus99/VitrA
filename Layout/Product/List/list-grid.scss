@@ -147,8 +147,41 @@
                     }
                 }
 
+                .ems-prd-price {
+                    margin-top: 15px;
+                    color: #4A4A4A;
+                    min-height: 37px;
+                    line-height: 1;
+                    .urunListe_pnlIndirimOran {
+                        background: $cl6;
+                        padding: 5px 10px;
+                        font-size: 17px;
+                        color: $white;
+                        margin-right: 7px;
+                        align-items: center;
+                    }
+                    .urunListe_brutFiyat {
+                        text-decoration: line-through;
+                        margin-bottom: 3px;
+                    }
+                    .urunListe_satisFiyat {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+
+                    @at-root {
+                        span.d {
+                            display: none;
+                        }
+                        .indirimli .urunListe_pnlIndirimOran {
+                            display: flex !important;
+                        }
+                    }
+                }
+
                 .ems-prd-compare-group{
                     display: inline-block !important;
+                    margin-top: 5px;
                     cursor: pointer;
                     .ems-prd-compare{
                         .sStylerWrp_checkbox{
