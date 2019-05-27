@@ -24,6 +24,7 @@
                 .ems-prd-inner{
                     height: 100%;
                     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+                    position: relative;
                 }
                 //-------------------------------------------//
                 //----- CONTENT MASK
@@ -61,12 +62,35 @@
                 }
                 
                 .ems-prd-desc{
-                    display: none;
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding: 0 7px;
+                    
+                    position: absolute;
+                    left: 0;
+                    top: auto;
+                    z-index: 2;
+                    width: 100%;
+                    > a {
+                        height: 100%;
+                    }
+                    &:hover {
+                        background: $cl6;
+                        color: $white;
+                        white-space: normal;
+                        overflow: auto;
+
+                        top: 0;
+                        height: 100%;
+                        padding: 15px;
+                    }
                 }
 
                 .ems-brand{
                     position: relative;
-                    height: 21px;
+                    margin-top: 20px;
                     .ems-brand-name{
                         margin: 5px 0;
                         color: $cl14;
@@ -208,6 +232,27 @@
     }
 }
 
+//BADGES
+.ems-prd {
+    &-badges {
+        > * {
+            display: none;
+            position: absolute;
+        }
+    }
+
+    //KAMPANYA
+    &.spr1 {
+        .kampanya {
+            display: block;
+            right: 0;
+            top: 7px;
+            background: url(/UPLOAD/prd-badges/kampanya.png) center center / cover no-repeat;
+            width: 100px;
+            height: 35px;
+        }
+    }
+}
 
 @media (max-width: $breakpoint-large) {
     //-------------------------------------------//

@@ -173,6 +173,8 @@
         [class$="_WebAdresi"] {
             font-size: 12px;
             margin-top: 5px;
+            position: relative;
+            z-index: 2;
         }
         [class$="_Adres"] {
             color: $cl3;
