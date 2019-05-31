@@ -260,6 +260,19 @@
     margin: 32px 0 48px;
 }
 
+//Diğer Fikirleri İncele
+.other-contents-in-page {
+    .swiper-slide {
+        padding: 0 9px;
+    }
+    .ideas-img {
+        height: 280px;
+        img {
+            display: none;
+        }
+    }
+}
+
 @media (max-width: $breakpoint-large) {
     .page-ideas-list {
         .post-idea {
