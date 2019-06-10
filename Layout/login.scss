@@ -150,6 +150,42 @@ a.btnYeniUyeKaydet {
     background-color: $cl5;
 }
 
+//signup popup
+.ems-signup-popup {
+    &-close {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 1;
+        padding: 10px;
+        background: #fff;
+        border-radius: 100%;
+        color: $black;
+    }
+
+    &-ready {
+        overflow: hidden !important;
+        .page-login {
+            z-index: 1001;
+        }
+        .ems-signup-popup-content {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .ems-signup-popup-close {
+            display: block;
+        }
+    }
+}
+
+
 //sifremi unuttum
 .pageDefault {
     @extend .uk-container;
