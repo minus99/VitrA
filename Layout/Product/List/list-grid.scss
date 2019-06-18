@@ -63,6 +63,7 @@
                 
                 .ems-prd-desc{
                     width: 100%;
+                    min-height: 22px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -77,14 +78,10 @@
                         height: 100%;
                     }
                     &:hover {
-                        background: $cl6;
-                        color: $white;
+                        background: $white;
                         white-space: normal;
+                        max-height: 80px;
                         overflow: auto;
-
-                        top: 0;
-                        height: 100%;
-                        padding: 15px;
                     }
                 }
 
@@ -245,11 +242,11 @@
     &.spr1 {
         .kampanya {
             display: block;
-            right: 0;
-            top: 7px;
-            background: url(/UPLOAD/prd-badges/kampanya.png) center center / cover no-repeat;
-            width: 100px;
-            height: 35px;
+            right: -7px;
+            top: -7px;
+            background: url(/UPLOAD/prd-badges/discount.png) center center / cover no-repeat;
+            width: 45px;
+            height: 45px;
         }
     }
 }
