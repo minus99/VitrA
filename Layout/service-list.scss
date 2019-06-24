@@ -179,6 +179,18 @@
         [class$="_Adres"] {
             color: $cl3;
             margin-top: 5px;
+            position: relative;
+            padding-right: 40px;
+        }
+        .view-360 {
+            width: 32px;
+            height: 32px;
+            background: url(/images/frontend/360.svg) no-repeat;
+            position: absolute;
+            right: 0;
+            top: 0px;
+            z-index: 2;
+            font-size: 0;
         }
         [class$="_Telefon"]{
             margin-top: 10px;
