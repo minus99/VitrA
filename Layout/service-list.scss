@@ -154,6 +154,7 @@
     .pServisListe{
         padding: 15px 18px 15px 55px;
         position: relative;
+        $pr: 28%;
         &:after{
             content: "";
             display: inline-block;
@@ -175,25 +176,29 @@
             margin-top: 5px;
             position: relative;
             z-index: 2;
+            padding-right: $pr;
         }
         [class$="_Adres"] {
             color: $cl3;
             margin-top: 5px;
             position: relative;
-            padding-right: 40px;
-        }
-        .view-360 {
-            width: 32px;
-            height: 32px;
-            background: url(/images/frontend/360.svg) no-repeat;
-            position: absolute;
-            right: 0;
-            top: 0px;
-            z-index: 2;
-            font-size: 0;
+            padding-right: $pr;
         }
         [class$="_Telefon"]{
             margin-top: 10px;
+            padding-right: $pr;
+        }
+        .view-360 {
+            $s: 48px;
+            width: $s;
+            height: $s;
+            background: url(/images/frontend/360.svg) no-repeat;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -$s/2;
+            z-index: 2;
+            font-size: 0;
         }
         [class$="_ServisTur"]{
             font-size: 0;
