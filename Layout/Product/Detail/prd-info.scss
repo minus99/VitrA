@@ -228,6 +228,12 @@
         }
     }
 }
+.go-calc {
+    display: none;
+    &-append & {
+        display: block;
+    }
+}
 .btn-go-calc {
     color: $cl6 !important;
 }

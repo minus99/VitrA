@@ -186,6 +186,10 @@ input[type="radio"]:checked{
                 text-align: left;
             }
         }
+        [ctid] {
+            display: flex;
+            align-items: center;
+        }
     }
 }
 .ems-form-err{
@@ -205,6 +209,10 @@ input[type="radio"]:checked{
         content: "*";
         margin-right: 2px;
     }
+}
+
+.xmlFormHeader {
+    display: none;
 }
 
 //-------------------------------------------//

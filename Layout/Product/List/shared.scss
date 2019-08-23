@@ -91,7 +91,7 @@
 
         .prmContent {
             display: none;
-            max-height: 120px;
+            height: 120px;
             overflow: auto;
             > *:first-child {
                 margin-top: 0;
@@ -99,14 +99,26 @@
         }
         .btn-rfc {
             cursor: pointer;
+            align-self: flex-start;
+            user-select: none;
+            .spn2 {
+                display: none;
+            }
         }
         &.rfc {
-            .btn-rfc,
             .prmDesc {
                 display: none;
             }
             .prmContent {
                 display: block;
+            }
+            .btn-rfc {
+                .spn1 {
+                    display: none;
+                }
+                .spn2 {
+                    display: inline;
+                }
             }
         }
     }
