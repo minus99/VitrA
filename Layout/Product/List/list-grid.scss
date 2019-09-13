@@ -62,26 +62,24 @@
                 }
                 
                 .ems-prd-desc{
-                    width: 100%;
-                    min-height: 22px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
                     padding: 0 7px;
-                    
                     position: absolute;
                     left: 0;
                     top: auto;
                     z-index: 2;
                     width: 100%;
                     > a {
-                        height: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 100%;
+                        background: $white;
+                        max-height: 130px;
                     }
                     &:hover {
-                        background: $white;
-                        white-space: normal;
-                        max-height: 80px;
-                        overflow: auto;
+                        > a {
+                            white-space: normal;
+                        }
                     }
                 }
 

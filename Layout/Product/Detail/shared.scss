@@ -47,6 +47,21 @@
                 &:last-child{
                     border: 0;
                 }
+
+                &.filter-mm {
+                    .gridUrunOzellikDetayIcerik {
+                        &::after {
+                            content: "mm";
+                        }
+                    }
+                }
+                &.filter-m2 {
+                    .gridUrunOzellikDetayIcerik {
+                        &::after {
+                            content: "m²";
+                        }
+                    }
+                }
             }
         }
     }
