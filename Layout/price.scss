@@ -1,0 +1,248 @@
+/*
+
+    ############# Price Page #############
+
+*/
+
+.page-price-list {
+    .hidden {
+        display: none;
+    }
+    
+    .block-01 {
+        .ds-cover {
+            &:before {
+                background: unset;
+            }
+            .dc-cover--content {
+                .dc-cover--title, .dc-cover--desc {
+                    color: #000;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .block-04 {
+        .ajx-search-list {
+            .price-list {
+                margin-top: unset;
+                .price-list-response,
+                .price-list-result,
+                .price-list-table {
+                    display: none;
+                }
+            }
+        }
+        .ajx-search-list.result-found {
+            .price-list {
+                margin-top: 60px;
+                .price-list-response,
+                .price-list-result,
+                .price-list-table {
+                    display: block;
+                }
+            }
+        }
+        .price-list {
+            .price-list-response {
+                font-size: 32px;
+                color: #973129;
+                font-weight: bold;
+            }
+            .price-list-result {
+                font-size: 13px;
+                color: #000;
+                font-weight: bold;
+                padding-bottom: 25px;
+            }
+            .price-list-table {
+                .price-list-table-head {
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: #973129;
+                        > li {
+                            flex: 1;
+                            color: #fff;
+                            padding: 15px;
+                        }
+                    }
+                }
+                .price-list-table-body {
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #ededed;
+                        &:last-of-type {
+                            border-bottom: none;
+                        }
+                        > li {
+                            flex: 1;
+                            padding: 25px 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .uk-container {
+            .page-top-title {
+                margin-top: 60px;
+                margin-bottom: 15px;
+            }
+            .html-dropdown.price-list-groups {
+                > ul {
+                    display: none;
+                }
+            }
+            .html-dropdown.price-list-groups.opened {
+                > ul {
+                    display: block;
+                }
+            }
+            .html-dropdown.price-list-groups {
+                > ul {
+                    > li.selected{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .result-found {
+            .empty-content-area {
+                display: none !important;
+            }
+        }
+
+        .empty-content-area {
+            height: 370px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background:rgba(168, 175, 166, 0.24);
+            > div {
+                font-size: 18px;
+                color: #000;
+                padding-top: 19px;
+            }
+        }
+
+        .hierarchy-accordion {
+            margin-top: 30px;
+            .post-catalog {
+                .uk-card-media-top {
+                    width: 312px;
+                    height: 365px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                }
+            }
+
+            .uk-card-title {
+                font-size: 14px;
+                color: #000;
+                font-weight: bold;
+            }
+            .card-title-type {
+                > div {
+                    padding: 0 5px 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+
+    .page-price-list {
+        .block-04 {
+            .search-holder {
+                height: 55px;
+                input {
+                    height: 55px !important;
+                    background-size: 23px !important;
+                    padding-left: 28px !important;
+                    font-size: 15px;
+                }
+            }
+            .price-list {
+                .price-list-table {
+                    .price-list-table-head {
+                        display: none;
+                    }
+                    .price-list-table-body {
+                        > ul {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 15px 0;
+                            > li {
+                                padding: 0;
+                            }
+                            .price-code {
+                                font-weight: bold;
+                                color: #000;
+                            }
+                            .price-name {
+                                color: #000;
+                            }
+                            .price-catalog {
+                                color: #828282;
+                            }
+                            .price-category {
+                                color: #000;
+                                padding-bottom: 15px;
+                            }
+                            .price2, .price1 {
+                                span {
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .empty-content-area {
+                height: 250px;
+                > picture {
+                    > img {
+                        width: 100px;
+                    }
+                }
+                > div {
+                    padding: 0 52px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+
+            .hierarchy-accordion {
+                > .post-catalog {
+                    width: 100% !important;
+                    .uk-card-media-top {
+                        margin-left: 15px;
+                    }
+                    .uk-card-body {
+                        margin: 0 15px;
+                    }
+                }
+            }
+
+            .page-top-title {
+                font-size: 27px;
+                color: #973129;
+                font-weight: bold;
+            }
+            .page-top-desc {
+                padding-bottom: 50px;
+            }
+        }
+    }
+
+}
