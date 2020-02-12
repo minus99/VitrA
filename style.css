@@ -15644,7 +15644,6 @@ main,
   display: flex;
   height: calc(100vh - 96px); }
   .mod-service-list .address-detail {
-    position: absolute;
     z-index: 98;
     width: 100%;
     height: 100%; }
@@ -15662,12 +15661,10 @@ main,
 .mod-service-list-inner {
   position: relative;
   z-index: 99;
-  margin-top: 6px;
-  margin-left: 40px;
   background: #ffffff;
   width: 410px;
   padding-top: 24px;
-  height: 75%;
+  height: 100%;
   overflow: hidden; }
 
 .mod-service-list-inner-wrp,
@@ -15795,9 +15792,16 @@ main,
     .servisIcerik .pServisListe [class$="_Email"] {
       font-size: 12px;
       margin-top: 5px;
-      padding-right: 28%;
+      margin-right: 8px;
+      padding-right: 8px;
+      font-weight: 700;
       position: relative;
-      z-index: 2; }
+      z-index: 2;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      border-right: 1px solid #000;
+      text-decoration: underline; }
     .servisIcerik .pServisListe [class$="_Adres"] {
       color: #4A4A4A;
       margin-top: 5px;
@@ -15837,13 +15841,12 @@ main,
       height: 100%;
       font-size: 0; }
     .servisIcerik .pServisListe [class$="_Koordinat"] a.show-map-btn {
-      position: absolute;
       right: 18px;
       bottom: 6px;
       z-index: 2;
-      padding: 5px;
-      font-size: 10px;
-      font-weight: 700; }
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: underline; }
     .servisIcerik .pServisListe [class$="_UlkeSehirSemt"],
     .servisIcerik .pServisListe [class$="_DepoSec"],
     .servisIcerik .pServisListe [class$="_Yetkili"],
@@ -15917,7 +15920,19 @@ main,
       font-size: 13px;
       line-height: 23px; }
     .servisIcerik .pServisListe [class$="_Telefon"] {
-      margin-top: 0; } }
+      margin-top: 0; }
+    .servisIcerik .pServisListe [class$="_Koordinat"] .phone {
+      font-size: 12px;
+      text-decoration: underline;
+      font-weight: bold;
+      border-right: 1px solid #000;
+      margin-right: 5px;
+      padding-right: 5px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+  .divServisListe_Telefon {
+    display: none; } }
 
 .ems-page-press-releases .icerikTemplateListeContainer {
   margin-top: 33px; }
@@ -17008,7 +17023,6 @@ main,
 
 .post-catalog .catalog-img {
   height: 240px;
-  width: 204px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17021,7 +17035,8 @@ main,
   justify-content: center; }
   .post-catalog .catalog-img img {
     min-width: 100%;
-    min-height: 100%; }
+    min-height: 100%;
+    height: 100%; }
 
 .post-catalog .catalog-info {
   padding: 16px 0 0; }
@@ -17175,6 +17190,10 @@ main,
           border-color: #973129; }
       .new-catalog .block-03 .kutuBodySolMenuTree .sev3 ul .sev4.act a {
         border-bottom: 1px solid #973129; }
+  .new-catalog .block-03 .kutuBodySolMenuTree .sev3.clickable a {
+    pointer-events: all; }
+    .new-catalog .block-03 .kutuBodySolMenuTree .sev3.clickable a:after {
+      display: none !important; }
   .new-catalog .block-03 .kutuBodySolMenuTree .sev3.act a:after, .new-catalog .block-03 .kutuBodySolMenuTree .sev3.sel a:after {
     content: "";
     background-image: url("/images/frontend/open-black.png");
@@ -21712,6 +21731,14 @@ a.btnUyeBilgi {
   .page-price-list .block-04 .ajx-search-list .price-list .price-list-table {
     display: none; }
 
+.page-price-list .block-04 .ajx-search-list .empty-content-area {
+  display: none; }
+
+.page-price-list .block-04 .ajx-search-list.search-keyup.no-result .empty-content-area {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
 .page-price-list .block-04 .ajx-search-list.result-found .price-list {
   margin-top: 60px; }
   .page-price-list .block-04 .ajx-search-list.result-found .price-list .price-list-response,
@@ -21760,6 +21787,8 @@ a.btnUyeBilgi {
     -ms-flex: 1;
     flex: 1;
     padding: 25px 15px; }
+  .page-price-list .block-04 .price-list .price-list-table .price-list-table-body ul .price2 {
+    text-decoration: line-through; }
 
 .page-price-list .block-04 .uk-container .page-top-title, .page-price-list .block-04 .homepage-showcase .hs-container .page-top-title, .homepage-showcase .page-price-list .block-04 .hs-container .page-top-title, .page-price-list .block-04 .mod-mini-search-body .ems-form-inner .page-top-title, .mod-mini-search-body .page-price-list .block-04 .ems-form-inner .page-top-title, .page-price-list .block-04 .pageDefault .page-top-title, .page-price-list .block-04 .prd-list-cover-holder .cover-content .page-top-title, .prd-list-cover-holder .page-price-list .block-04 .cover-content .page-top-title, .page-price-list .block-04 .ems-serial-cover .content-holder .page-top-title, .ems-serial-cover .page-price-list .block-04 .content-holder .page-top-title, .page-price-list .block-04 .compareHolder .compareMenuHolder .page-top-title, .compareHolder .page-price-list .block-04 .compareMenuHolder .page-top-title, .page-price-list .block-04 .compareHolder .compareContent .page-top-title, .compareHolder .page-price-list .block-04 .compareContent .page-top-title, .page-price-list .block-04 .page-compare .page-top-title, .page-price-list .block-04 .uk-container .pageHeaderDefault, .page-price-list .block-04 .homepage-showcase .hs-container .pageHeaderDefault, .homepage-showcase .page-price-list .block-04 .hs-container .pageHeaderDefault, .page-price-list .block-04 .mod-mini-search-body .ems-form-inner .pageHeaderDefault, .mod-mini-search-body .page-price-list .block-04 .ems-form-inner .pageHeaderDefault, .page-price-list .block-04 .pageDefault .pageHeaderDefault, .page-price-list .block-04 .prd-list-cover-holder .cover-content .pageHeaderDefault, .prd-list-cover-holder .page-price-list .block-04 .cover-content .pageHeaderDefault, .page-price-list .block-04 .ems-serial-cover .content-holder .pageHeaderDefault, .ems-serial-cover .page-price-list .block-04 .content-holder .pageHeaderDefault, .page-price-list .block-04 .compareHolder .compareMenuHolder .pageHeaderDefault, .compareHolder .page-price-list .block-04 .compareMenuHolder .pageHeaderDefault, .page-price-list .block-04 .compareHolder .compareContent .pageHeaderDefault, .compareHolder .page-price-list .block-04 .compareContent .pageHeaderDefault, .page-price-list .block-04 .page-compare .pageHeaderDefault {
   margin-top: 60px;

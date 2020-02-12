@@ -33,6 +33,14 @@
                     display: none;
                 }
             }
+            .empty-content-area {
+                display: none;
+            }
+        }
+        .ajx-search-list.search-keyup.no-result {
+            .empty-content-area {
+                display: flex !important;
+            }
         }
         .ajx-search-list.result-found {
             .price-list {
@@ -80,6 +88,9 @@
                         > li {
                             flex: 1;
                             padding: 25px 15px;
+                        }
+                        .price2 {
+                            text-decoration: line-through;
                         }
                     }
                 }

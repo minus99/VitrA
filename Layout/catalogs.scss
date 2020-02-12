@@ -14,7 +14,6 @@
 .post-catalog {
     .catalog-img{
         height: 240px;
-        width: 204px;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -22,6 +21,7 @@
         img{
             min-width: 100%;
             min-height: 100%;
+            height: 100%;
         }
     }
     .catalog-info{
@@ -258,6 +258,14 @@
                         a {
                             border-bottom: 1px solid #973129;
                         }
+                    }
+                }
+            }
+            .sev3.clickable {
+                a {
+                    pointer-events: all;
+                    &:after {
+                        display: none !important;
                     }
                 }
             }
