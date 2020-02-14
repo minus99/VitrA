@@ -152,7 +152,7 @@
     .servis_bilgi {
         display: none;
     }
-    .pServisListe{
+    .pServisListe {
         padding: 15px 18px 15px 55px;
         position: relative;
         $pr: 28%;
@@ -168,6 +168,20 @@
         }
         &:last-child {
             margin-bottom: 20px;
+        }
+        .divServisListe_Koordinat {
+            display: flex;
+            > .phone {
+                order: 1;
+            }
+            > .show-map-btn {
+                order: 3;
+            }
+            > .divServisListe_Email {
+                order: 2;
+            }
+
+
         }
         [class$="_FirmaAdi"]{
             color: $cl3;
@@ -185,7 +199,6 @@
         }
         [class$="_Email"] {
             font-size: 12px;
-            margin-top: 5px;
             margin-right: 8px;
             padding-right: 8px;
             font-weight: 700;

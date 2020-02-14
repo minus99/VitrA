@@ -15777,6 +15777,22 @@ main,
       left: 18px; }
     .servisIcerik .pServisListe:last-child {
       margin-bottom: 20px; }
+    .servisIcerik .pServisListe .divServisListe_Koordinat {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .servisIcerik .pServisListe .divServisListe_Koordinat > .phone {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1; }
+      .servisIcerik .pServisListe .divServisListe_Koordinat > .show-map-btn {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3; }
+      .servisIcerik .pServisListe .divServisListe_Koordinat > .divServisListe_Email {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2; }
     .servisIcerik .pServisListe [class$="_FirmaAdi"] {
       color: #4A4A4A;
       font-size: 14px;
@@ -15791,7 +15807,6 @@ main,
       z-index: 2; }
     .servisIcerik .pServisListe [class$="_Email"] {
       font-size: 12px;
-      margin-top: 5px;
       margin-right: 8px;
       padding-right: 8px;
       font-weight: 700;
@@ -17021,6 +17036,10 @@ main,
 .all-catalog-page-holder .post-catalog.show {
   display: block; }
 
+.catalog-no-result .new-catalog .no-result-content {
+  margin: 50px 0;
+  display: block !important; }
+
 .post-catalog .catalog-img {
   height: 240px;
   overflow: hidden;
@@ -17111,6 +17130,9 @@ main,
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important; }
+
+.new-catalog .ems-breadcrumb .icerikNavigasyon span h1 {
+  margin: 0 !important; }
 
 .new-catalog .sev4.act.all-catalog,
 .new-catalog .uk-accordion-content > ul > li {

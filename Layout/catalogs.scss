@@ -11,6 +11,15 @@
     }
 }
 
+.catalog-no-result {
+    .new-catalog {
+        .no-result-content {
+            margin: 50px 0;
+            display: block !important;
+        }
+    }
+}
+
 .post-catalog {
     .catalog-img{
         height: 240px;
@@ -156,6 +165,15 @@
 }
 
 .new-catalog {
+    .ems-breadcrumb {
+        .icerikNavigasyon {
+            span {
+                h1 {
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
     .sev4.act.all-catalog,
     .uk-accordion-content>ul>li {
         display: inline;
@@ -490,7 +508,6 @@
     // NEW CATALOG END <--
 
     .new-catalog {
-        
     }
 
     .hierarchy-accordion {
