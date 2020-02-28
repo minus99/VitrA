@@ -12,6 +12,23 @@
 //-------------------------------------------//
 //----- SERVICE LIST
 //-------------------------------------------//
+/*
+.mod-service-list.service-ajx-loading {
+    .mod-service-list-inner-wrp {
+        .mod-service-list-body {
+            #servisIcerik {
+                background-image: url("/images/pageLoading.gif");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 80px 80px;
+            }
+            .servisIcerik {
+            }
+        }
+    }
+}
+*/
+
 .mod-service-list{
     position: relative;
     display: flex;
@@ -180,12 +197,13 @@
             > .divServisListe_Email {
                 order: 2;
             }
-
-
+            > a {
+                z-index: 99;
+            }
         }
         [class$="_FirmaAdi"]{
             color: $cl3;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 700;
             line-height: 19px;
             padding-right: $pr;
@@ -359,6 +377,14 @@
         margin-top: 12px;
         height: 480px;
         .pServisListe{
+            .divServisListe_Koordinat {
+                .divServisListe_Email {
+                    font-size: 14px;;
+                }
+                .show-map-btn {
+                    font-size: 14px !important;
+                }
+            }
             [class$="_FirmaAdi"]{
                 font-size: 13px;
                 line-height: 23px;
@@ -373,13 +399,13 @@
             }
             [class$="_Koordinat"]{
                 .phone{
-                    font-size: 12px;
                     text-decoration: underline;
                     font-weight: bold;
                     border-right: 1px solid #000;
                     margin-right: 5px;
                     padding-right: 5px;
-                    display: inline-flex
+                    display: inline-flex;
+                    font-size: 14px;
                 }
             }
         }
