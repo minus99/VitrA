@@ -120,6 +120,28 @@
         @extend .btn-big;
         @extend .btn-primary-border;
     }
+    .call-us {
+        z-index: 999999 !important;
+        position: fixed !important;
+        right: 10px !important;
+        bottom: 245px !important;
+        a {
+            &:first-child {
+                display: block;
+            }
+            &:last-child {
+                display: none;
+            }
+        }
+        .deneme {
+            &:first-child {
+                display: none;
+            }
+            &:last-child {
+                display: block;
+            }
+        }
+    }
 }
 .newsletter-title{
     display: block;

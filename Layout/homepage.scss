@@ -1,22 +1,27 @@
 //-------------------------------------------//
 //----- HOMEPAGE GENERAL
 //-------------------------------------------//
-.hp-bundle-title{
+.swiper-container {
+    z-index: 0;
+}
+
+.hp-bundle-title {
     color: $cl6;
     font-size: 32px;
     font-weight: 700;
     line-height: 56px;
 }
-.hp-bundle-padding{
+
+.hp-bundle-padding {
     padding-top: 16px;
     padding-bottom: 16px;
 }
 
-.page-homepage{
-    .bnr-product-for-you{
+.page-homepage {
+    .bnr-product-for-you {
         margin-bottom: 16px;
     }
-    .product-for-you{
+    .product-for-you {
         margin-bottom: 64px;
     }
 }
@@ -24,75 +29,77 @@
 //-------------------------------------------//
 //----- HOMEPAGE INSPIRATIONAL IDEAS
 //-------------------------------------------//
-.hp-inspirational-ideas{
+.hp-inspirational-ideas {
     @extend .hp-bundle-padding;
     margin-top: 32px;
-    .uk-width-2-3\@m{
-        .ideas-img{
+    .uk-width-2-3\@m {
+        .ideas-img {
             height: 528px;
         }
-        .ideas-text-holder{
+        .ideas-text-holder {
             width: calc((( 100% / 8) * 5) + -8px);
         }
     }
-    .uk-width-1-3\@m{
+    .uk-width-1-3\@m {
         height: 528px;
         overflow: hidden;
     }
-    .uk-width-1-1{
+    .uk-width-1-1 {
         //flex: 1;
         height: calc((100% - 16px) / 2);
         height: 256px;
-        .ideas-text-holder{
+        .ideas-text-holder {
             width: 92.5%;
         }
-        + .uk-width-1-1{
+        +.uk-width-1-1 {
             margin-top: 16px;
         }
     }
-    .uk-width-1-2{
-        .ideas-text-holder{
+    .uk-width-1-2 {
+        .ideas-text-holder {
             width: 82.5%;
         }
     }
 }
-.hp-inspirational-ideas-title{
+
+.hp-inspirational-ideas-title {
     @extend .hp-bundle-title;
     margin-bottom: 8px;
 }
-.inspirational-ideas-holder{
+
+.inspirational-ideas-holder {
     position: relative;
     height: 100%;
-    .ideas-img{
+    .ideas-img {
         height: 100%;
         overflow: hidden;
-        > div{
+        >div {
             height: 100%;
             transform: scale(1);
-            transition:all .3s linear;
+            transition: all .3s linear;
             position: relative;
-            &:before{
+            &:before {
                 content: "";
-                width:100%;
-                height:100%;
-                position:absolute;
-                overflow:hidden;
-                top:0;
-                left:0;
-                opacity:0;
-                background-color:rgba(0,0,0,.3);
-                transition:all .4s ease-in-out
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                background-color: rgba(0, 0, 0, .3);
+                transition: all .4s ease-in-out
             }
         }
     }
-    .ideas-text-holder{
+    .ideas-text-holder {
         $folding-size: 8px;
         padding: 12px 30px 12px 24px;
         background: rgba(168, 175, 166, .8);
         position: absolute;
         left: (-$folding-size);
         bottom: 16px;
-        &::after{
+        &::after {
             content: "";
             border-width: $folding-size 0px $folding-size $folding-size;
             border-color: rgba(154, 160, 152, 0.8) transparent transparent transparent;
@@ -102,7 +109,7 @@
             top: 100%;
         }
     }
-    .ideas-title{
+    .ideas-title {
         color: $white;
         font-size: 24px;
         font-weight: 700;
@@ -111,11 +118,10 @@
         margin-top: 0;
         cursor: default;
     }
-    .ideas-desc{
+    .ideas-desc {
         color: $white;
         font-size: 16px;
         line-height: 24px;
-
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
@@ -127,7 +133,7 @@
     .ideas-btn {
         margin-top: 10px;
     }
-    .ideas-link{
+    .ideas-link {
         opacity: 0;
         position: absolute;
         top: 0;
@@ -135,13 +141,13 @@
         width: 100%;
         height: 100%;
     }
-    &:hover{
-        .ideas-img{
-            > div {
-                transform:scale(1.05);
-                &:before{
-                    opacity:1;
-                    filter:alpha(opacity=100);
+    &:hover {
+        .ideas-img {
+            >div {
+                transform: scale(1.05);
+                &:before {
+                    opacity: 1;
+                    filter: alpha(opacity=100);
                 }
             }
         }
@@ -151,29 +157,31 @@
     }
 }
 
-
 //-------------------------------------------//
 //----- HOMEPAGE PROMINENT COLLECTIONS
 //-------------------------------------------//
-.hp-prominent-collections-wrapper{
+.hp-prominent-collections-wrapper {
     @extend .hp-bundle-padding;
-    .all-links-wrapper{
+    .all-links-wrapper {
         margin-top: 48px;
+        >div {
+            z-index: 0;
+        }
     }
-    .all-links-item{
+    .all-links-item {
         height: 96px;
         position: relative;
-        .content{
+        .content {
             position: relative;
             z-index: 2;
-            span{
-                color: $white;	
+            span {
+                color: $white;
                 font-size: 24px;
                 font-weight: 700;
                 line-height: 44px;
             }
         }
-        a{
+        a {
             font-size: 0;
             position: absolute;
             top: 0;
@@ -181,9 +189,8 @@
             width: 100%;
             height: 100%;
             z-index: 5;
-
         }
-        &:before{
+        &:before {
             content: " ";
             display: inline-block;
             width: 100%;
@@ -192,46 +199,47 @@
             top: 0;
             left: 0;
             z-index: 1;
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0, 0, 0, 0.4);
         }
     }
     //-------------------------------------------//
     //----- SLIDER ARROW
     //-------------------------------------------//
     .swiper-button-prev,
-    .swiper-button-next{
+    .swiper-button-next {
         color: $cl3;
         font-size: 16px;
         padding: 8px;
         box-shadow: 0px 0px 1px #{$black}75;
         opacity: 0;
-        transition:all .3s linear;
+        transition: all .3s linear;
         top: 39%;
     }
-    .swiper-button-prev{
+    .swiper-button-prev {
         left: -40px;
     }
-    .swiper-button-next{
+    .swiper-button-next {
         right: -40px;
     }
-    &:hover{
+    &:hover {
         .swiper-button-prev,
-        .swiper-button-next{
+        .swiper-button-next {
             opacity: 1;
         }
     }
-
 }
-.hp-prominent-collections-title{
+
+.hp-prominent-collections-title {
     @extend .hp-bundle-title;
     margin-bottom: 8px;
 }
-.prominent-collections-holder{
+
+.prominent-collections-holder {
     padding: 0 8px;
-    .prom-col-img{
+    .prom-col-img {
         display: flex;
         margin-bottom: 23px;
-        > a{
+        >a {
             display: inherit;
             font-size: 0;
             width: 100%;
@@ -239,86 +247,83 @@
             overflow: hidden;
         }
     }
-    .prom-col-title{
-        > a{
+    .prom-col-title {
+        >a {
             color: $cl6;
             font-size: 24px;
             font-weight: 700;
             line-height: 44px;
             transition: all .3s;
-            &:hover{
+            &:hover {
                 color: $cl7;
             }
         }
     }
-    .prom-col-desc{
+    .prom-col-desc {
         color: $cl3;
         font-size: 14px;
         line-height: 24px;
         margin-top: 5px;
-        
         overflow: hidden;
         height: 72px;
     }
 }
 
-
-.collections-in-page{
-    .swiper-wrapper{
-        .swiper-slide{
+.collections-in-page {
+    .swiper-wrapper {
+        .swiper-slide {
             width: calc(100% / 3);
             max-width: 378px;
         }
     }
 }
 
-
 //-------------------------------------------//
 //----- HOMEPAGE RECENT NEWS
 //-------------------------------------------//
-.hp-recent-news{
+.hp-recent-news {
     @extend .hp-bundle-padding;
-    background-color: rgba(168,175,166,0.24);
+    background-color: rgba(168, 175, 166, 0.24);
 }
-.hp-news-title{
+
+.hp-news-title {
     @extend .hp-bundle-title;
     margin-bottom: 9px;
 }
-.hp-news-item{
+
+.hp-news-item {
     background-color: $white;
     border: 1px solid $cl13;
     margin: 8px 0;
-    .news-img{
+    .news-img {
         height: 220px;
         overflow: hidden;
     }
-    .news-content{
+    .news-content {
         padding-left: 24px;
         padding-right: 24px;
         height: 260px;
     }
-    .news-title{
+    .news-title {
         color: $cl6;
         font-size: 24px;
         font-weight: 700;
         line-height: 44px;
-
         height: 45px;
         overflow: hidden;
         -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-    .news-desc{
+    .news-desc {
         color: $cl3;
         font-size: 14px;
         line-height: 24px;
-        
         height: 120px;
         overflow: hidden;
         margin-bottom: 8px;
     }
-    .news-link{
+    .news-link {
         color: $cl6;
         font-size: 16px;
         line-height: 29px;
@@ -328,45 +333,45 @@
 //-------------------------------------------//
 //----- HOMEPAGE PRODUCTS
 //-------------------------------------------//
-.hp-products-wrapper{
+.hp-products-wrapper {
     @extend .hp-bundle-padding;
 }
-.hp-products-title{
+
+.hp-products-title {
     @extend .hp-bundle-title;
     margin-bottom: -7px;
 }
-.hp-product-holder{
-    .prd-img{
+
+.hp-product-holder {
+    .prd-img {
         margin-bottom: 16px;
         height: 256px;
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+        img {
             min-width: 100%;
             min-height: 100%;
         }
     }
-    .prd-title{
+    .prd-title {
         color: $cl6;
         font-size: 24px;
         font-weight: 700;
         line-height: 44px;
-
         margin-bottom: 4px;
-        a{
+        a {
             transition: all .3s;
-            &:hover{
+            &:hover {
                 color: #003A5C;
             }
         }
     }
-    .prd-desc{
+    .prd-desc {
         color: $cl3;
         font-size: 14px;
         line-height: 24px;
-
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
@@ -374,12 +379,13 @@
         text-overflow: ellipsis;
         max-height: 48px;
     }
-    .prd-btn-group{
+    .prd-btn-group {
         margin-top: 16px;
     }
 }
-.hp-products-loop{
-    > div {
+
+.hp-products-loop {
+    >div {
         margin-top: 16px;
         margin-bottom: 16px;
     }
@@ -388,94 +394,107 @@
 //-------------------------------------------//
 //----- PRESS RELEASES PRODUCT FOR YOU
 //-------------------------------------------//
-.bnr-product-for-you{
+.bnr-product-for-you {
     margin-top: 32px;
 }
-.product-for-you{
+
+.product-for-you {
     margin-bottom: 32px;
-    .text{
+    .text {
         display: block;
         color: $cl4;
         font-size: 48px;
         font-weight: 700;
         line-height: 87px;
-
         margin-bottom: 30px;
     }
 }
 
 @media (max-width: $breakpoint-large) {
-    .page-homepage{
+    .call-us {
+        z-index: 999999 !important;
+        position: fixed !important;
+        right: 10px !important;
+        bottom: 245px !important;
+        .deneme {
+            display: block !important;
+            height: 110px !important;
+            float: unset !important;
+            padding: 0px !important;
+        }
+        img {
+            display: none !important;            
+        }
+    }
+    .page-homepage {
         display: flex;
         flex-direction: column;
     }
-
     //-------------------------------------------//
     //----- HOMEPAGE INSPIRATIONAL IDEAS
     //-------------------------------------------//
-    .hp-inspirational-ideas-wrapper{
+    .hp-inspirational-ideas-wrapper {
         margin-bottom: 30px;
-        .uk-grid{
-            + .uk-grid{
+        .uk-grid {
+            +.uk-grid {
                 display: none;
             }
         }
     }
-    .hp-inspirational-ideas{
+    .hp-inspirational-ideas {
         order: 3;
         padding: 0;
-        > .uk-container{
+        >.uk-container {
             padding: 0;
         }
-        .ideas-img{
+        .ideas-img {
             max-height: 176px !important;
         }
-        .ideas-text-holder{
+        .ideas-text-holder {
             width: 100% !important;
         }
-        .uk-width-1-2{
+        .uk-width-1-2 {
             display: none;
         }
         .uk-width-1-3\@m,
-        .uk-width-1-1{
+        .uk-width-1-1 {
             height: auto;
         }
     }
-    .hp-inspirational-ideas-title{
+    .hp-inspirational-ideas-title {
         margin-bottom: 8px;
         padding-left: 16px;
         padding-right: 16px;
         font-size: 20px;
         line-height: 36px;
     }
-    .inspirational-ideas-holder{
-        .ideas-img{
-            > div{
+    .inspirational-ideas-holder {
+        .ideas-img {
+            >div {
                 width: 100%;
                 height: 176px;
-                &:before{
+                &:before {
                     content: none;
                 }
             }
         }
-        .ideas-text-holder{
+        .ideas-text-holder {
             padding: 12px 30px 12px 24px;
             margin-bottom: 14px;
             background: none;
             position: initial;
-            &::after{
+            &::after {
                 content: none;
             }
         }
-        .ideas-title{
+        .ideas-title {
             color: $cl6;
             font-size: 20px;
             line-height: 36px;
         }
-        .ideas-desc{
+        .ideas-desc {
             color: $cl3;
             font-size: 14px;
-
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -484,56 +503,55 @@
             height: 50px;
         }
     }
-    .uk-width-1-3\@m{
-        .inspirational-ideas-holder{
+    .uk-width-1-3\@m {
+        .inspirational-ideas-holder {
             display: flex;
-            .ideas-img{
+            .ideas-img {
                 width: 50%;
             }
-            .ideas-text-holder{
+            .ideas-text-holder {
                 width: 50% !important;
                 margin-bottom: 0;
                 padding-bottom: 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                .ideas-title{
+                .ideas-title {
                     margin-bottom: 0;
                 }
             }
         }
     }
-    
     //-------------------------------------------//
     //----- HOMEPAGE PROMINENT COLLECTIONS
     //-------------------------------------------//
-    .hp-prominent-collections{
+    .hp-prominent-collections {
         order: 2;
-        > .uk-container{
+        >.uk-container {
             padding: 0;
         }
     }
-    .hp-prominent-collections-wrapper{
+    .hp-prominent-collections-wrapper {
         padding-top: 10px;
         padding-bottom: 0;
-        > div:not(.all-links-wrapper){
+        >div:not(.all-links-wrapper) {
             display: none;
         }
-        .all-links-wrapper{
+        .all-links-wrapper {
             margin-top: 0px;
-            > div{
-                + div{
+            >div {
+                +div {
                     margin-top: 8px;
                 }
             }
         }
-        .all-links-item{
+        .all-links-item {
             height: 64px;
             padding-left: 40px;
             padding-right: 40px;
             text-align: center;
-            .content{
-                span{
+            .content {
+                span {
                     font-size: 20px;
                     line-height: 24px;
                 }
@@ -543,59 +561,58 @@
     //-------------------------------------------//
     //----- HOMEPAGE RECENT NEWS
     //-------------------------------------------//
-    .hp-recent-news{
+    .hp-recent-news {
         display: none;
     }
     //-------------------------------------------//
     //----- HOMEPAGE PRODUCTS
     //-------------------------------------------//
-    .hp-featured-products{
-        > .uk-container{
+    .hp-featured-products {
+        >.uk-container {
             padding: 0;
         }
     }
-    .hp-products-wrapper{
+    .hp-products-wrapper {
         order: 1;
         padding-top: 0px;
         padding-bottom: 0px;
     }
-    .hp-products-title{
+    .hp-products-title {
         font-size: 20px;
         line-height: 36px;
         margin-bottom: 7px;
         padding-left: 16px;
         padding-right: 16px;
     }
-    .hp-product-holder{
+    .hp-product-holder {
         padding: 0 16px;
-        .prd-img{
+        .prd-img {
             margin-bottom: 16px;
             height: 160px;
             margin-right: -16px;
             margin-left: -16px;
         }
-        .prd-title{
+        .prd-title {
             color: $cl6;
             font-size: 24px;
             font-weight: 700;
             line-height: 44px;
-
             margin-bottom: 4px;
         }
-        .prd-desc{
+        .prd-desc {
             color: $cl3;
             font-size: 14px;
             line-height: 24px;
         }
-        .prd-btn-group{
+        .prd-btn-group {
             margin-top: 16px;
-            > a {
+            >a {
                 width: 100%;
             }
         }
     }
-    .hp-products-loop{
-        > div {
+    .hp-products-loop {
+        >div {
             margin-top: 16px;
             margin-bottom: 16px;
         }
@@ -603,44 +620,40 @@
     //-------------------------------------------//
     //----- PRESS RELEASES PRODUCT FOR YOU
     //-------------------------------------------//
-    .bnr-product-for-you{
+    .bnr-product-for-you {
         display: none;
     }
-    .product-for-you{
+    .product-for-you {
         margin-left: -15px;
         margin-right: -15px;
         margin-bottom: 0px !important;
         height: 160px !important;
         position: relative;
-        .text{
+        .text {
             color: $cl3;
             font-size: 24px;
             line-height: 44px;
-
             margin-bottom: 0;
         }
-        a{
+        a {
             background: none;
             border: none;
             font-size: 0;
-
             position: absolute;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-
-            &:hover{
+            &:hover {
                 background: none;
                 border: none;
                 font-size: 0;
             }
         }
     }
-
-    .collections-in-page{
-        .swiper-wrapper{
-            .swiper-slide{
+    .collections-in-page {
+        .swiper-wrapper {
+            .swiper-slide {
                 width: 100%;
             }
         }

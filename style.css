@@ -14559,6 +14559,19 @@ html.popup-html {
   padding-top: 32px;
   padding-bottom: 32px;
   background-color: #5E5751; }
+  .newsletter .call-us {
+    z-index: 999999 !important;
+    position: fixed !important;
+    right: 10px !important;
+    bottom: 245px !important; }
+    .newsletter .call-us a:first-child {
+      display: block; }
+    .newsletter .call-us a:last-child {
+      display: none; }
+    .newsletter .call-us .deneme:first-child {
+      display: none; }
+    .newsletter .call-us .deneme:last-child {
+      display: block; }
 
 .newsletter-title {
   display: block;
@@ -15141,6 +15154,9 @@ main,
   .new-user-info .section-5 {
     height: 190px; } }
 
+.swiper-container {
+  z-index: 0; }
+
 .hp-bundle-title, .hp-inspirational-ideas-title, .hp-prominent-collections-title, .hp-news-title, .hp-products-title {
   color: #973129;
   font-size: 32px;
@@ -15260,6 +15276,8 @@ main,
 
 .hp-prominent-collections-wrapper .all-links-wrapper {
   margin-top: 48px; }
+  .hp-prominent-collections-wrapper .all-links-wrapper > div {
+    z-index: 0; }
 
 .hp-prominent-collections-wrapper .all-links-item {
   height: 96px;
@@ -15457,6 +15475,18 @@ main,
     margin-bottom: 30px; }
 
 @media (max-width: 960px) {
+  .call-us {
+    z-index: 999999 !important;
+    position: fixed !important;
+    right: 10px !important;
+    bottom: 245px !important; }
+    .call-us .deneme {
+      display: block !important;
+      height: 110px !important;
+      float: unset !important;
+      padding: 0px !important; }
+    .call-us img {
+      display: none !important; }
   .page-homepage {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -15658,7 +15688,10 @@ main,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: calc(100vh - 96px); }
+  height: calc(100vh - 96px);
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
   .mod-service-list .address-detail {
     z-index: 98;
     width: 100%;
@@ -15890,6 +15923,15 @@ main,
       background-color: rgba(151, 49, 41, 0.1); }
       .servisIcerik .pServisListe.selected [class$="_Koordinat"] a[rel][onclick] {
         pointer-events: none; }
+  .servisIcerik .pServisListe {
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+  .servisIcerik .pServisListe.activeted {
+    opacity: 1; }
+  .servisIcerik .pServisListe:last-child {
+    padding-bottom: 50px; }
 
 .servis_kayitYok {
   padding: 20px; }
@@ -15968,6 +16010,8 @@ main,
       display: -ms-inline-flexbox;
       display: inline-flex;
       font-size: 14px; }
+    .servisIcerik .pServisListe:last-child {
+      padding-bottom: 0px; }
   .divServisListe_Telefon {
     display: none; } }
 
@@ -21630,7 +21674,8 @@ a.btnUyeBilgi {
 
 .ds-cover {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 0; }
   .ds-cover::before {
     content: "";
     display: inline-block;
